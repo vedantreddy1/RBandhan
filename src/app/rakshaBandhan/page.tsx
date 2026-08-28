@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import { useEffect, useState } from "react";
@@ -824,9 +823,7 @@
 //   );
 // }
 
-
 "use client";
-
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -938,17 +935,17 @@ export default function RakshaBandhanPage() {
     }
   };
 
-  const openGift =async () => {
+  const openGift = async () => {
     setStarted(true);
-  if (audio) {
-    try {
-      await audio.play();
-      setMusicOn(true);
-    } catch {
-      setMusicOn(false);
-      console.log("Music could not be started automatically.");
+    if (audio) {
+      try {
+        await audio.play();
+        setMusicOn(true);
+      } catch {
+        setMusicOn(false);
+        console.log("Music could not be started automatically.");
+      }
     }
-  }
     setTimeout(() => {
       window.scrollTo({
         top: 0,
